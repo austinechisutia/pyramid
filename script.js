@@ -2,10 +2,17 @@ const charater = "#";
 const count = 8;
 const rows = [];
 
-
-for(let i = 0; i<=count; i++){
-     rows.push(charater);
+function rowCount(num1, num2){
+    return " ".repeat(num2-num1) +charater.repeat(2*num1-1);
 }
+
+let done  = 0;
+
+while(rows.length < count){
+    rows.push(rowCount(rows.length+1, count));
+}
+
+
 
 let result = "";
 
