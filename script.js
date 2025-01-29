@@ -12,6 +12,10 @@ while(rows.length < count){
     rows.push(rowCount(rows.length+1, count));
 }
 
+for(let i = count; i > 0; i--){
+    rows.push(rowCount(i, count));
+
+}
 
 
 let result = "";
